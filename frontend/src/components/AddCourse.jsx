@@ -302,6 +302,7 @@
         }
       };
     
+    
       return (
         <div style={styles.container}>
           <h2>Assign Faculty to Course</h2>
