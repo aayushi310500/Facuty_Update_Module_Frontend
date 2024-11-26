@@ -83,6 +83,11 @@ const DeleteCourse = () => {
       setSuccessMessage("Course deleted successfully!");
       setError(null);
       setSelectedCourse(""); // Reset selected course
+
+      setTimeout(() => {
+        setSuccessMessage(null);
+        window.location.reload(); // Reload the page after the success message disappears
+      }, 1000);
     } catch (err) {
       setError(err.message);
       setSuccessMessage(null);
