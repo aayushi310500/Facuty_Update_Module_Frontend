@@ -5,14 +5,11 @@ import LoginPage from './components/LoginForm.jsx';
 // import EmployeeDetails from './components/EmployeeDetails.jsx'
 // import AddCourse from './components/AddCourse.jsx';
 import UpdateEmployee from './components/UpdateEmployee.jsx';
-// import CourseManagement from './components/CourseMangement.jsx';
-// import { CourseProvider } from "./components/CourseContext";
-// import ReceivedSwappingRequests from './Pages/ReceivedSwappingRequests.js';
-// import RequestSwapping from './Pages/RequestSwapping.js';
-// import MyRequests from './Pages/MyRequests.js';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import AboutMe from './Pages/AboutMe.js';
+import "./css/main.css";
 
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+  });
 
 
 const App = () => {
@@ -21,7 +18,7 @@ const App = () => {
         <Router>
             <Routes>
                 <Route path="/" element={<LoginPage />} />
-                <Route path="/employee" element={<UpdateEmployee />} />
+                <Route path="/employee/:userId" element={<UpdateEmployee />} />
                
             </Routes>
         </Router>

@@ -1,0 +1,115 @@
+/* General Styling */
+.dashboard-container {
+    margin: 20px auto;
+    padding: 20px;
+    /* max-width: 1200px; */
+    /* background: linear-gradient(145deg, #457b9d, #1d3557);  */
+    border-radius: 15px;
+    /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); */
+    
+    font-family: 'Roboto', sans-serif;
+    color: #f1faee; /* Consistent text color */
+  }
+  
+  /* Dashboard Header */
+  .dashboard-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px; /* Larger, more prominent header */
+    font-weight: bold;
+    color: #a8dadc; /* Light teal from the previous theme */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Main Flex Container */
+  .dashboard-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px;
+  }
+  
+  /* Individual Card Styling */
+  .dashboard-card {
+    flex: 1;
+    min-width: 300px; /* Minimum width for responsive design */
+    /* border: 2px solid #a8dadc;  */
+    /* background-color: rgba(255, 255, 255, 0.1); Transparent background */
+    padding: 20px;
+    border-radius: 15px;
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .dashboard-card:hover {
+    transform: translateY(-5px);
+    /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); More pronounced hover effect */
+    border-color: #f1faee; /* Change border color on hover */
+  }
+  
+  /* Card Content Styling */
+  .dashboard-card h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #f1faee; /* Header color for cards */
+  }
+  
+  .dashboard-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #f1faee;
+  }
+  
+  /* Scrollbar Styling */
+  /* .dashboard-container::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .dashboard-container::-webkit-scrollbar-track {
+    background: #1d3557; 
+    border-radius: 10px;
+  }
+  
+  .dashboard-container::-webkit-scrollbar-thumb {
+    background: #a8dadc; 
+    border-radius: 10px;
+  }
+  
+  .dashboard-container::-webkit-scrollbar-thumb:hover {
+    background: #f1faee;
+  } */
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .dashboard-content {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .dashboard-card {
+      width: 100%;
+    }
+  }
+  
+  /* Button Styling for Cards (Optional) */
+  .dashboard-card .button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #f1faee;
+    background-color: #a8dadc;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .dashboard-card .button:hover {
+    background-color: #1d3557;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(168, 218, 220, 0.3);
+  }
+  

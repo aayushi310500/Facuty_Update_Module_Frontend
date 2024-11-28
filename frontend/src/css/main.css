@@ -1,0 +1,43 @@
+/* Ensuring html and body take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main Container */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: scroll;
+  background-color: #f1faee;
+  transition: opacity 0.5s ease-in-out; /* Fade-in effect on page load */
+}
+
+/* Optional: Fade-in effect when the page refreshes */
+body.loaded {
+  opacity: 1;
+}
+
+/* Set opacity to 0 initially to create a fade-in effect */
+body {
+  opacity: 0;
+}
+
+/* Handle Footer (if any) */
+footer {
+  padding: 10px;
+  background: #1d3557;
+  color: #f1faee;
+  text-align: center;
+}
+
+/* Optional: Background styling and color */
+body {
+  background-color: #f1faee;
+  overflow-y: scroll; /* Always show vertical scrollbar */
+}

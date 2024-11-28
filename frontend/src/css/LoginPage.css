@@ -1,0 +1,124 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0f3443, #34e89e); /* Smooth gradient background */
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Login Container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Login Card */
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  background-color: #1d3b42; /* Dark teal background */
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+  padding: 40px 30px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Login Title */
+.login-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* Form Styles */
+.form-control {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-control label {
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 40px; /* Adjusted for icons */
+  border-radius: 30px;
+  border: 1px solid #16a085;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 16px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #1abc9c;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Input Icons */
+.form-control .input-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #ffffff;
+  pointer-events: none;
+}
+
+/* Button Styles */
+.login-button {
+  background-color: #1abc9c;
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #16a085;
+  box-shadow: 0px 5px 15px rgba(26, 188, 156, 0.5);
+}
+
+.login-button:active {
+  transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-card {
+    padding: 30px 20px;
+  }
+
+  .login-title {
+    font-size: 22px;
+  }
+
+  .login-button {
+    font-size: 16px;
+    padding: 10px;
+  }
+}

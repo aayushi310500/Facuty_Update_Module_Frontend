@@ -1,0 +1,113 @@
+/* General Container */
+.container {
+  margin: 20px auto;
+  padding: 30px;
+  max-width: 500px;
+  background: linear-gradient(135deg, #2c3e50, #34495e); /* Gradient background */
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+/* Form Styling */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.selectcourse{
+  margin: 5px;
+}
+
+/* Input Fields */
+.input {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #7f8c8d;
+  border-radius: 30px; /* Rounded pill shape */
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.input:focus {
+  border-color: #1abc9c;
+  background-color: rgba(255, 255, 255, 0.4);
+  outline: none;
+  box-shadow: 0 0 8px rgba(26, 188, 156, 0.5);
+}
+
+/* Button Styling */
+.button {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #1abc9c, #16a085);
+  color: #ffffff;
+  border: none;
+  border-radius: 30px; /* Rounded pill button */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #16a085, #1abc9c);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(26, 188, 156, 0.5);
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+/* Error Message */
+.error {
+  color: #e74c3c;
+  background-color: rgba(231, 76, 60, 0.2);
+  border: 1px solid #e74c3c;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(231, 76, 60, 0.3);
+}
+
+/* Success Popup */
+.successPopup {
+  color: #27ae60;
+  background-color: rgba(39, 174, 96, 0.2);
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #27ae60;
+  box-shadow: 0 4px 8px rgba(39, 174, 96, 0.3);
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .input, .button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}

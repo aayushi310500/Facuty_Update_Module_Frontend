@@ -1,35 +1,33 @@
-import React from 'react';
-import EmployeeDetails from './EmployeeDetails'; // Adjust the path based on your file structure
-import AddCourse from './AddCourse'; // Adjust the path based on your file structure
-import DeleteCourse from './DeleteCourse';
-// import { CourseProvider } from "../components/CourseContext";
+import React from "react";
+import EmployeeDetails from "./EmployeeDetails"; // Adjust the path based on your file structure
+import AddCourse from "./AddCourse"; // Adjust the path based on your file structure
+import DeleteCourse from "./DeleteCourse"; // Adjust the path based on your file structure
+import "../css/UpdateEmployee.css"; // Import the CSS file
 
 const UpdateEmployee = () => {
   return (
-    // <CourseProvider>
-    <div style={{ margin: '20px', padding: '10px' }}>
-      <h1>Dashboard</h1>
-      <div style={{ display: 'flex', gap: '20px' }}>
+    <div className="dashboard-container">
+      <h1 className="dashboard-header">UPDATE DETAILS</h1>
+      <div className="dashboard-content">
         {/* Employee Details Component */}
-        <div style={{ flex: 1, border: '1px solid gray', padding: '10px' }}>
-          {/* <h2>Employee Details</h2> */}
+        <div className="dashboard-card">
           <EmployeeDetails />
         </div>
 
         {/* Add Courses Component */}
-        <div style={{ flex: 1, border: '1px solid gray', padding: '10px' }}>
-          {/* <h2>Add Courses</h2> */}
+        <div className="dashboard-card">
           <AddCourse />
         </div>
 
-        {/* Employee Details Component */}
-        <div style={{ flex: 1, border: '1px solid gray', padding: '10px' }}>
-          {/* <h2>Employee Details</h2> */}
+        {/* Delete Courses Component */}
+        <div className="dashboard-card">
           <DeleteCourse />
         </div>
       </div>
+      <script src="app.js"></script>
     </div>
-    // </CourseProvider>
+
+    
   );
 };
 

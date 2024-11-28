@@ -1,0 +1,305 @@
+/* Main Container */
+.container {
+  margin: 30px auto;
+  padding: 30px;
+  max-width: 900px;
+  background: linear-gradient(145deg, #1d3557, #457b9d);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  font-family: 'Roboto', sans-serif;
+  color: #f1faee;
+  overflow-y: auto; /* Enable scrolling */
+  max-height: 90vh; /* Prevent content overflow */
+}
+
+
+/* Image Container Section */
+.image-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Stack the image and button vertically */
+  align-items: center; /* Center align the items */
+  gap: 10px; /* Add some spacing between the image and button */
+}
+
+.photograph {
+  width: 250px; /* Adjusted size */
+  height: 250px; /* Adjusted size */
+  border-radius: 50%;
+  border: 2px solid #a8dadc;
+  object-fit: cover;
+  margin-bottom: 10px; /* Space between the image and the delete button */
+}
+
+.delete-button {
+  background-color: #e63946;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px; /* Matching the button shape */
+  font-size: 16px; /* Slightly larger font */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  width: auto; /* Ensure button width adjusts according to text */
+  margin-top: 10px; /* Add some space between the image and button */
+}
+
+.delete-button:hover {
+  background-color: #d62828;
+  transform: translateY(-2px); /* Add slight lift effect on hover */
+}
+
+
+/* Header */
+.container h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #a8dadc;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Details Container */
+.details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Profile Image Section */
+/* .image-container {
+  text-align: center;
+} */
+.image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fallback-text {
+  position: absolute;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6); /* Optional for background */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.photograph {
+  width: 250px; /* Increased size */
+  height: 250px; /* Increased size */
+  border-radius: 50%;
+  border: 2px solid #a8dadc;
+  object-fit: cover;
+  margin-bottom: 15px; /* Added extra spacing between the image and button */
+}
+
+
+.delete-button {
+  background-color: #e63946;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px; /* Updated to match other buttons */
+  font-size: 16px; /* Slightly larger font */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+
+.delete-button:hover {
+  background-color: #d62828;
+  transform: translateY(-2px); /* Add slight lift effect on hover */
+}
+
+
+/* Info Section */
+.info {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #f1faee;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #a8dadc;
+  border-radius: 10px;
+  background-color: #457b9d;
+  color: #f1faee;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus {
+  border-color: #1d3557;
+  outline: none;
+  box-shadow: 0 0 8px rgba(24, 160, 251, 0.3);
+}
+
+/* Courses Section */
+.info p {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.info ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.info ul li {
+  background-color: #1d3557;
+  border: 1px solid #a8dadc;
+  border-radius: 20px;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #f1faee;
+  transition: background-color 0.3s ease;
+}
+
+.info ul li:hover {
+  background-color: #a8dadc;
+  color: #1d3557;
+}
+
+/* Image Upload Section */
+.preview-container {
+  margin: 20px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Stack the image and button vertically */
+  align-items: center; /* Center align the items */
+}
+
+.preview-image {
+  width: 120px; /* Increased size */
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #a8dadc;
+  object-fit: cover;
+  margin-bottom: 10px; /* Ensure there is space between the image and button */
+}
+
+.file-input-container {
+  position: relative;
+  display: inline-block;
+}
+
+.file-input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.file-input-label {
+  background-color: #a8dadc;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.file-input-label:hover {
+  background-color: #1d3557;
+  transform: translateY(-2px);
+}
+
+/* Buttons */
+.button {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #a8dadc;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #1d3557;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(168, 218, 220, 0.3);
+}
+
+/* Success and Error Messages */
+.success {
+  background-color: #2a9d8f;
+  color: #f1faee;
+  padding: 10px;
+  border: 1px solid #264653;
+  border-radius: 5px;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.error {
+  background-color: #e63946;
+  color: #fff;
+  padding: 10px;
+  border: 1px solid #b22234;
+  border-radius: 5px;
+  margin: 15px 0;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .details-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info {
+    max-width: 100%;
+  }
+
+  .button, .delete-button {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .photograph {
+    width: 140px;
+    height: 140px;
+  }
+
+  .preview-image {
+    width: 100px;
+    height: 100px;
+  }
+}
