@@ -33,6 +33,8 @@ const useEmployeeDetails = () => {
           signal,
         });
 
+       
+
         if (!response.ok) {
           throw new Error("Failed to fetch employee details.");
         }
@@ -46,6 +48,9 @@ const useEmployeeDetails = () => {
           setError(error.message);
         }
       } finally {
+        setTimeout(() => {
+          setError(null);
+        }, 2000);
         setLoading(false);
       }
     };
@@ -62,6 +67,7 @@ const useEmployeeDetails = () => {
     setEmployee,
     loading,
     error,
+    setError,
     successMessage,
     setSuccessMessage,
     selectedFile,

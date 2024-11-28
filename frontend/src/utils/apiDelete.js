@@ -24,7 +24,14 @@ export const deleteCourse = async (courseName, token) => {
     body: JSON.stringify({ courseName }),
   });
 
-  if (!response.ok) {
+  if(response.status === 401){
+    throw new Error("Invalid token");
+  }
+  else if (response.status === 400) {  
+    throw new Error("No courses like this found assigned to the faculty");
+  } 
+  
+  else if (!response.ok) {
     const errorData = await response.json();
     throw new Error(errorData.message || "Failed to delete course.");
   }

@@ -26,6 +26,12 @@ export const updateEmployeeDetails = async (employee, token) => {
       },
       body: formData,
     });
+
+    if (response.status === 415) {
+      throw new Error("Only JPEG and PNG images are allowed.");
+    } else if (response.status === 413) {
+      throw new Error("File size must be less than 5MB.");
+    }
   
     if (!response.ok) {
       throw new Error("Failed to upload the image.");
@@ -39,7 +45,7 @@ export const updateEmployeeDetails = async (employee, token) => {
         Authorization: `Bearer ${token}`,
       },
     });
-  
+
     if (!response.ok) {
       throw new Error("Failed to delete the image.");
     }
