@@ -17,14 +17,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   width: 100%;
+  min-height: 100vh; /* Ensures the container takes up full height of the screen */
 }
 
 /* Login Card */
 .login-card {
   width: 100%;
-  max-width: 400px;
+  max-width: 450px; /* Set max-width to 450px */
   background-color: #1d3b42; /* Dark teal background */
   border-radius: 20px;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
@@ -108,9 +108,28 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .login-card {
+    padding: 30px 20px;
+    width: 450px !important; /* Ensure it stays 450px on laptops */
+  }
+ 
+
+  .login-title {
+    font-size: 22px;
+  }
+
+  .login-button {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+/* For Mobile Devices */
 @media (max-width: 768px) {
   .login-card {
     padding: 30px 20px;
+    max-width: 90%; /* Adjust max-width for mobile */
   }
 
   .login-title {
